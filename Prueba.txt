@@ -1,0 +1,90 @@
+## Punto 1 Codigo en Java
+
+public class NewMain {
+
+    public static void main(String[] args) {
+        
+        System.out.println(metodoQueHaceAlgo(5));
+        
+    }
+    
+    public static int metodoQueHaceAlgo(int valor){
+        System.out.println("El Valor inicial: "+valor);
+            if(valor<3){
+                System.out.println("El valor menor: "+valor);
+                return valor;
+            }
+            System.out.println("El valor mayor: "+valor);
+            int x = metodoQueHaceAlgo(valor-1)*metodoQueHaceAlgo(valor-2);
+            System.out.println("El resultado es: "+x);
+            return x;
+        }
+    
+}
+
+Resultado: 8
+
+## Punto 2 Codigo en Java
+
+public class NewMain {
+
+    public static void main(String[] args) {
+        
+        System.out.println(division(10,2));
+        
+    }
+    
+    public static double division(int valor1, int valor2){
+        double resultado;
+        resultado = valor1/valor2;
+        return resultado;
+    }
+    
+}
+
+##Punto 3 Codigo Java
+
+public class NumeroPerfecto {
+    public static void main(String[] args) {
+        int i, suma = 0, n;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Introduce un número: ");
+        n = sc.nextInt();
+        for (i = 1; i < n; i++) {                           
+            if (n % i == 0) {
+                suma = suma + i;
+            }
+        }
+        if (suma == n) {              
+            System.out.println("Perfecto");
+        } else {
+            System.out.println("No es perfecto");
+
+        }
+    }
+}
+
+##Punto 4 Codigo Java
+
+public class NewMain {
+
+    public static void main(String[] args) {
+        
+        fizzBuzz(100);
+        
+    }
+    
+    public static void fizzBuzz(int valor){
+        for(int i = 1; i<=valor; i++){
+            if(((i%3)==0)&&((i%5)==0)){
+                System.out.println(i+": "+"FizzBuzz");
+            }else if((i%3)==0){
+                System.out.println(i+": "+"Fizz");
+            }else if ((i%5)==0){
+                System.out.println(i+": "+"Buzz");
+            }
+        }
+    }
+    
+}
+
